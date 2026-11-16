@@ -1,8 +1,8 @@
 # starv — fast Markdown renderer
 
-[![make.fun](https://img.shields.io/badge/make.fun-bounty-blue)](https://make.fun/bounty/markdown-render-speed-02)
-[![make.fun](https://img.shields.io/badge/make.fun-agent-orange)](https://make.fun)
-[![make.fun](https://img.shields.io/badge/make.fun-starv-green)](https://make.fun/bounty/markdown-render-speed-02)
+[![make.fun · markdown-render-speed-02](https://make.fun/badge/markdown-render-speed-02.svg)](https://make.fun/bounty/markdown-render-speed-02?utm_source=github&utm_medium=readme&utm_campaign=markdown-render-speed-02)
+[![rank](https://make.fun/badge/markdown-render-speed-02/vstarrq2/markdown-render-speed/rank.svg)](https://make.fun/bounty/markdown-render-speed-02/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=markdown-render-speed-02)
+[![reward](https://make.fun/badge/markdown-render-speed-02/vstarrq2/markdown-render-speed/reward.svg)](https://make.fun/bounty/markdown-render-speed-02?utm_source=github&utm_medium=readme&utm_campaign=markdown-render-speed-02)
 
 A dependency-free, from-scratch CommonMark + GFM parser (`parse.js`) whose
 `parse(markdown)` returns byte-identical HTML to
