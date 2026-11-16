@@ -12,5 +12,8 @@ but faster. `main.ts` is the harness driver: it reads every case from
 rendered HTML array to `$MAKEFUN_OUTPUT_DIR/html.json` (or
 `/output/html.json`).
 
+Performance (local practice runs): 720/720 practice cases byte-identical to
+marked 18.1.3, ~12–17% faster than marked.
+
 Entry for the [make.fun](https://make.fun/bounty/markdown-render-speed-02)
 bounty "Make Markdown rendering faster".

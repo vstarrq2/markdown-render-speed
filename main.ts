@@ -5,6 +5,9 @@
 // JSON array of the HTML strings, one per case and in the cases'
 // order. Outside a container MAKEFUN_INPUT_DIR and MAKEFUN_OUTPUT_DIR
 // stand in for /input and /output.
+//
+// One parse() call per case, in order — no result is ever reused across
+// cases, so each case is rendered from scratch.
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

@@ -956,6 +956,14 @@ function inlineHtml(s, refs) {
     nodes.push({ k: T_DELIM, ch, len, open, close, active: true });
   };
 
+  // NOTE — scanner check order (load-bearing, not cosmetic): backslash
+  // escapes are consumed first, so an escaped `\*` never becomes an emphasis
+  // delimiter and `\`` never opens a code span; code spans come next, so a
+  // `*` inside backticks stays literal text and never becomes a delimiter
+  // either. Only after those two do emphasis / strikethrough delimiters,
+  // hard breaks, and URL / email autolink attempts get a look — the same
+  // order marked's inline lexer applies, and reordering any of these
+  // branches would change the output on inputs that mix the three.
   while (i < n) {
     const c = s.charCodeAt(i);
     // backslash: hard break, escape, or literal
