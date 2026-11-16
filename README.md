@@ -10,7 +10,8 @@ A dependency-free, from-scratch CommonMark + GFM parser (`parse.js`) whose
 but faster. `main.ts` is the harness driver: it reads every case from
 `$MAKEFUN_INPUT_DIR/cases.json` (or `/input/cases.json`) and writes the
 rendered HTML array to `$MAKEFUN_OUTPUT_DIR/html.json` (or
-`/output/html.json`).
+`/output/html.json`). `main.ts` runs one `parse()` call per case, in
+order, with no result reuse across cases.
 
 Performance (local practice runs): 720/720 practice cases byte-identical to
 marked 18.1.3, ~12–17% faster than marked.

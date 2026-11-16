@@ -7,7 +7,8 @@
 // stand in for /input and /output.
 //
 // One parse() call per case, in order — no result is ever reused across
-// cases, so each case is rendered from scratch.
+// cases, so each case is rendered from scratch. The driver does no
+// rendering of its own: every byte of HTML comes from parse().
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

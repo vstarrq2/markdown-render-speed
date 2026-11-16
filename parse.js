@@ -964,6 +964,10 @@ function inlineHtml(s, refs) {
   // hard breaks, and URL / email autolink attempts get a look — the same
   // order marked's inline lexer applies, and reordering any of these
   // branches would change the output on inputs that mix the three.
+  // The `<` branch (inline tag first, then autolink) sits between the
+  // code-span branch and the bracket opener, and the emphasis /
+  // strikethrough branch only comes after the `]` closer, so a `*` inside
+  // a link label is still scanned as a delimiter before the label closes.
   while (i < n) {
     const c = s.charCodeAt(i);
     // backslash: hard break, escape, or literal
